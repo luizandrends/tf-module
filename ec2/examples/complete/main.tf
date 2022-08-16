@@ -36,7 +36,7 @@ module "ec2_instance" {
       volume_size = 50
       tags = {
         ManagedBy = "Terraform"
-        Name = "my-root-block"
+        Name      = "my-root-block"
       }
     },
   ]
