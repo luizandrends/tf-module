@@ -1,9 +1,5 @@
-locals {
-  create = var.create
-}
-
 resource "aws_instance" "main" {
-  count = local.create && !var.create_spot_instance ? 1 : 0
+  count = var.create ? 1 : 0
 
   ami                  = var.ami
   instance_type        = var.instance_type
