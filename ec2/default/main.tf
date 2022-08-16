@@ -28,6 +28,8 @@ resource "aws_instance" "main" {
 
   ebs_optimized = var.ebs_optimized
 
+  tags = var.tags
+
   dynamic "root_block_device" {
     for_each = var.root_block_device
     content {
